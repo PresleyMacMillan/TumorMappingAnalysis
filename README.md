@@ -84,8 +84,7 @@ STEP13_logisdtic_regression_script.py.
    preforms.
 
 
-
-Licenses
+# License
 
 Copytight 2023 MacMillan et al.
 
