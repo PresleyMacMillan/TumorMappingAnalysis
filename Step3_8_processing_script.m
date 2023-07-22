@@ -45,8 +45,8 @@ radius_list = [25, 50, 100];
 
 
 cd (czi_image_folder)
-MSC = dir('MSC161-T-stack1*');
-UT = dir('UT63-T-stack2*');
+MSC = dir('MSC*');
+UT = dir('UT*');
 
 mergestructs = @(x,y) cell2struct([struct2cell(x),struct2cell(y)],fieldnames(x),1);
 image_names = mergestructs(MSC,UT);
