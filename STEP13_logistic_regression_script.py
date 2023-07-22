@@ -186,21 +186,21 @@ def normalize_and_scale_data_smote_nc(X_train, y_train, X_test, y_test, top_fold
     X_norm_df = pd.DataFrame(normalized_X_train, columns=X_train.columns)
     
     save_folder = f'{top_folder_path}/Neighbourhood_Analysis_2023/SMOTE_NC_DATA'
-    save_name_xtrain_org = (f'{save_folder}/X_training_data_org_{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_ytrain_org = (f'{save_folder}/y_training_org_{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_xtest_org = (f'{save_folder}/X_testing_org_{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_ytest_org = (f'{save_folder}/y_testing_org_{radius}um_radius_full_tumour_TEST2.csv')
+    save_name_xtrain_org = (f'{save_folder}/X_training_data_org_{radius}um_radius_full_tumour.csv')
+    save_name_ytrain_org = (f'{save_folder}/y_training_org_{radius}um_radius_full_tumour.csv')
+    save_name_xtest_org = (f'{save_folder}/X_testing_org_{radius}um_radius_full_tumour.csv')
+    save_name_ytest_org = (f'{save_folder}/y_testing_org_{radius}um_radius_full_tumour.csv')
     X_train.to_csv(save_name_xtrain_org)
     y_train.to_csv(save_name_ytrain_org)
     X_test.to_csv(save_name_xtest_org)
     y_test.to_csv(save_name_ytest_org)
     
-    save_name_xnorm = (f'{save_folder}/X_training_normalized_smote_nc_{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_xtrain = (f'{save_folder}/X_training_resampled_data_smote_nc_sampled_{radius}um_radius_full_tumour_TEST2.csv')
+    save_name_xnorm = (f'{save_folder}/X_training_normalized_smote_nc_{radius}um_radius_full_tumour.csv')
+    save_name_xtrain = (f'{save_folder}/X_training_resampled_data_smote_nc_sampled_{radius}um_radius_full_tumour.csv')
 
-    save_name_ytrain = (f'{save_folder}/y_training_data_smote_nc_sampled_{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_xtest = (f'{save_folder}/X_testing_data_scaled_smote_nc_sampled_{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_ytest = (f'{save_folder}/y_testing_data_smote_nc_sampled_{radius}um_radius_full_tumour_TEST2.csv')
+    save_name_ytrain = (f'{save_folder}/y_training_data_smote_nc_sampled_{radius}um_radius_full_tumour.csv')
+    save_name_xtest = (f'{save_folder}/X_testing_data_scaled_smote_nc_sampled_{radius}um_radius_full_tumour.csv')
+    save_name_ytest = (f'{save_folder}/y_testing_data_smote_nc_sampled_{radius}um_radius_full_tumour.csv')
     
     
     X_norm_df.to_csv(save_name_xnorm)
@@ -506,8 +506,8 @@ def statsmodels_logistic_regression_optimization(X_training_data_w_intercept, y_
                                                 
 def save_optimaztion_df(top_path, radius, optimization_df, best_df):
     save_folder = f'{top_path}/Neighbourhood_Analysis_2023/Summary_Dataframe'
-    save_name = (f'{save_folder}/Logistic_Regression_optimization_{radius}um_radius_full_tumour_TEST2.csv')
-    save_optimal = (f'{save_folder}/Logistic_Regression_optimization_{radius}um_radius_optimal_featuers_full_tumour_TEST2.csv')
+    save_name = (f'{save_folder}/Logistic_Regression_optimization_{radius}um_radius_full_tumour.csv')
+    save_optimal = (f'{save_folder}/Logistic_Regression_optimization_{radius}um_radius_optimal_featuers_full_tumour.csv')
     optimization_df.to_csv(save_name)
     best_df.to_csv(save_optimal)
     
@@ -523,20 +523,20 @@ def run_logistic_reg_smote_NC(top_folder_path, radius):
     
     save_folder = f'{top_path}/Neighbourhood_Analysis_2023/SMOTE_NC_DATA'
     
-    save_name_xtrain_org = (f'{save_folder}/X_training_data_org{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_ytrain_org = (f'{save_folder}/y_training_org{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_xtest_org = (f'{save_folder}/X_testing_org{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_ytest_org = (f'{save_folder}/y_testing_org{radius}um_radius_full_tumour_TEST2.csv')
+    save_name_xtrain_org = (f'{save_folder}/X_training_data_org{radius}um_radius_full_tumour.csv')
+    save_name_ytrain_org = (f'{save_folder}/y_training_org{radius}um_radius_full_tumour.csv')
+    save_name_xtest_org = (f'{save_folder}/X_testing_org{radius}um_radius_full_tumour.csv')
+    save_name_ytest_org = (f'{save_folder}/y_testing_org{radius}um_radius_full_tumour.csv')
     
     X_train.to_csv(save_name_xtrain_org)
     y_train.to_csv(save_name_ytrain_org)
     X_test.to_csv(save_name_xtest_org)
     y_test.to_csv(save_name_ytest_org)
     
-    save_name_xtrain = (f'{save_folder}/X_training_data_smote_nc_sampled{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_ytrain = (f'{save_folder}/y_training_data_smote_nc_sampled{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_xtest = (f'{save_folder}/X_testing_data_smote_nc_sampled{radius}um_radius_full_tumour_TEST2.csv')
-    save_name_ytest = (f'{save_folder}/y_testing_data_smote_nc_sampled{radius}um_radius_full_tumour_TEST2.csv')
+    save_name_xtrain = (f'{save_folder}/X_training_data_smote_nc_sampled{radius}um_radius_full_tumour.csv')
+    save_name_ytrain = (f'{save_folder}/y_training_data_smote_nc_sampled{radius}um_radius_full_tumour.csv')
+    save_name_xtest = (f'{save_folder}/X_testing_data_smote_nc_sampled{radius}um_radius_full_tumour.csv')
+    save_name_ytest = (f'{save_folder}/y_testing_data_smote_nc_sampled{radius}um_radius_full_tumour.csv')
     
     
     X_train_w_intercept, corr_feature =prepare_training_data_for_logit(X_resampled, y_resampled, X_train)
@@ -613,13 +613,13 @@ if __name__ == '__main__':
         best_logit_feature_results.to_csv(f'{top_folder_path}/Neighbourhood_Analysis_2023/'
                                         f'Logistic_Regression_Results/'
                                         f'Optimized_Model_SMOTE_NC_{radius}um_radius'
-                                        f'_feature_results_TEST2.csv')
+                                        f'_feature_results.csv')
 
         
         best_logit_summary_results.to_csv(f'{top_folder_path}/Neighbourhood_Analysis_2023/'
                                         f'Logistic_Regression_Results/'
                                         f'Optimized_Model_SMOTE_NC_{radius}um_radius'
-                                        f'_summary_results_TEST2.csv')
+                                        f'_summary_results.csv')
 
         sk_logreg, sk_y_pred, sk_y_pred_prob, fpr, tpr, thresholds, auc, sk_acc = scikit_learn_logit_modeling(X_train_w_intercept,
                                                                                                             y_resampled, 
@@ -649,12 +649,12 @@ if __name__ == '__main__':
         classification_df = pd.DataFrame(report).transpose()
         classification_df.to_csv(f'{top_folder_path}/Neighbourhood_Analysis_2023/'
                                         f'Logistic_Regression_Results/{radius}um_radius'
-                                        f'_classification_report_TEST2.csv')
+                                        f'_classification_report.csv')
         training_cm_df = pd.DataFrame(training_cm)
         training_cm_df.to_csv(f'{top_folder_path}/Neighbourhood_Analysis_2023/'
                                         f'Logistic_Regression_Results/{radius}um_radius'
-                                        f'_training_confusion_matrix_TEST2.csv')
+                                        f'_training_confusion_matrix.csv')
         testing_data_cm_df = pd.DataFrame(testing_data_cm)
         testing_data_cm_df.to_csv(f'{top_folder_path}/Neighbourhood_Analysis_2023/'
                                         f'Logistic_Regression_Results/{radius}um_radius'
-                                        f'_testing_confusion_matrix_TEST2.csv')
+                                        f'_testing_confusion_matrix.csv')
