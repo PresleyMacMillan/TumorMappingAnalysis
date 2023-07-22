@@ -50,17 +50,17 @@ following data folder structure:
 
 
 
-vessel_processing_only_um_2023.py
+STEP9_vessel_processing_only_um_2023.py
 
 Run this first on each time point folder (level 3)
 
-NP_region_processing_radius_um_2023.py 
+STEP10_NP_region_processing_radius_um_2023.py 
 
     Note:  image names endings are hard coded in get_image_and_data_paths() to 
             correspond to the names as defined in the MATLAB scripts
 
 
-sphere_sampling_2023.py 
+STEP11_sphere_sampling_2023.py 
 
     Loops over folder by default assumes you select the time point folder. 
     Generates spherical samples of desired size and number.
@@ -69,10 +69,17 @@ sphere_sampling_2023.py
    
    Note: this step is slow and computationally intensive
 
-index_of_dispersion_calc_um_2023.py
+STEP12_index_of_dispersion_calc_um_2023.py
 
    Calculates index of dispersion, assumes minimum tissue threshold of 10% 
    Assumes you specifiy the top folder and that all data follows the folder structure
    outlined above
 
+STEP13_logisdtic_regression_script.py.
+
+   Loads the data table corresponding to the radius being tested. Data is split into 
+   testing and training datasets, normalized, scaled and sampled using SMOTE_NC. Data
+   is prepared for model training and the logistic regression model is trained. Finally
+   the testing dataset is used to assess how well the logisitic regression model 
+   preforms.
 
