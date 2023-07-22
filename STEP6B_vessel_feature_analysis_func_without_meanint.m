@@ -2,6 +2,14 @@ function [img_skel, branch_pts_image, labeled_vess_segs, vess_radius, ...
     binary_hs_image, hotspots_pts_image_dil, results_table_um_new_table,...
     hs_diameter_table] = STEP6B_vessel_feature_analysis_func_without_meanint(processed_ves,...
     original_particle_image, px_per_um, save_dir,sample_name, results_name_px, results_name_um)
+
+
+%%% Code orginally designed by Kingston et al., 2021. Origial code can 
+%%% be found at:
+%%% https://github.com/BenKingston/NTEC_Vessel_Analysis/
+
+
+
 tic
 shortfile = sample_name;
 display(['Analyzing vessels for ' shortfile])
